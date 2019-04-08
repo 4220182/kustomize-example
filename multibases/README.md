@@ -47,6 +47,9 @@
 发布到开发环境：
 ```
 $ kubectl kustomize ./dev/ |kubectl apply -f -
+或
+$ kubectl apply -k ./dev/
+
 $ kubectl get po,svc
 NAME                                    READY   STATUS    RESTARTS   AGE
 pod/hello1-dev-hello-866686dbd5-x4x7w   1/1     Running   0          13m
@@ -61,6 +64,9 @@ service/hello2-dev-hello   NodePort    10.254.105.108   <none>        80:8882/TC
 发布到生产环境：
 ```
 $ kubectl kustomize ./production/ |kubectl apply -f -
+或
+$ kubectl apply -k ./production/
+
 $ kubectl get svc,po
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
 service/hello1-pro-hello   NodePort    10.254.43.50     <none>        80:8883/TCP      7s
@@ -76,4 +82,7 @@ pod/hello2-pro-hello-b96d57d4c-mqmqz    1/1     Running   0          7s
 ```
 $ kubectl kustomize ./dev/ |kubectl delete -f -
 $ kubectl kustomize ./production/ |kubectl delete -f -
+或
+$ kubectl delete -k ./dev/
+$ kubectl delete -k ./production/
 ```
