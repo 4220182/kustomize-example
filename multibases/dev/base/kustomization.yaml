@@ -1,0 +1,9 @@
+commonLabels:
+  version: dev
+bases:
+- ./../../base
+
+patchesStrategicMerge:
+  - pod-env-global.yaml
+
+namePrefix: dev-

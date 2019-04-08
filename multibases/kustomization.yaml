@@ -1,0 +1,6 @@
+bases:
+- ./dev/hello1
+- ./staging
+- ./production
+
+namePrefix: cluster-a-

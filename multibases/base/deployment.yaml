@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello
+        image: nginx:1.7.9
+        env:
+        - name: TAG
+          value: hello
+        - name: MIN_NEED_PLAYER_COUNT
+          value: "3"
+        - name: BET
+          value: "0"
+        ports:
+        - containerPort: 80 

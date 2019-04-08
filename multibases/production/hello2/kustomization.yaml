@@ -1,0 +1,11 @@
+commonLabels:
+  project: hello2
+
+bases:
+- ./../base
+
+patchesStrategicMerge:
+  - svc-nodeport.yaml
+  - pod-env.yaml
+
+namePrefix: hello2-

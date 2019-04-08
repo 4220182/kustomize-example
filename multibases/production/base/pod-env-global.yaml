@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello
+        env:
+        - name: MIN_NEED_PLAYER_COUNT 
+          value: "3"
+

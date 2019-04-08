@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello
+spec:
+  ports:
+  - port: 80
+    nodePort: 8884
+
